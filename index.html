@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CodeSpace Team</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/Users/clintedward86icloud.com/Desktop/flex-panel-gallery/css/main.css"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="panels">
+        <div class="panel panel1">
+            <p>Ross</p>
+            <p>C</p>
+            <p>Weston</p>
+        </div>
+        <div class="panel panel2">
+            <p>Nate</p>
+            <p>O</p>
+            <p>Banda</p>
+        </div>
+        <div class="panel panel3">
+            <p>Emma</p>
+            <p>D</p>
+            <p>Dicks</p>
+        </div>
+        <div class="panel panel4">
+            <p>Stephan</p>
+            <p>E</p>
+            <p>Louw</p>
+        </div>
+        <div class="panel panel5">
+            <p>Clint</p>
+            <p>S</p>
+            <p>Clark</p>
+        </div>
+        <div class="panel panel6">
+            <p>Tegan</p>
+            <p>P</p>
+            <p>Crous</p>
+        </div>
+        <div class="panel panel7">
+            <p>Buhle</p>
+            <p>A</p>
+            <p>Mlingwana</p>
+        </div>
+        <div class="panel panel8">
+            <p>Chelsea</p>
+            <p>C</p>
+            <p>Lewis</p>
+        </div>
+        <div class="panel panel9">
+            <p>Devon</p>
+            <p>E</p>
+            <p>Naidoo</p>
+        </div>
+    </div>
+
+    <script>
+        const panels = document.querySelectorAll('.panel');
+
+        function toggleOpen() {
+            this.classList.toggle('open');
+        }
+
+        function toggleActive(e) {
+            console.log(e.propertyName);
+            if (e.propertyName.includes('flex')) {
+                this.classList.toggle('open-active');
+            }
+        }
+
+        panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+        panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+    </script>
+
+</body>
+
+</html>
